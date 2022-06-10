@@ -99,13 +99,6 @@ class Moderator(Base, Identifiable, UserRole):
         return self.id
 
 
-class BlockedModToken(Base):  # TODO replace with full session control
-    __tablename__ = "blocked-mod-tokens"
-
-    id = Column(Integer, primary_key=True)
-    jti = Column(String(36), nullable=False)
-
-
 class ModPerm(Base):
     __tablename__ = "mub-modperms"
 
